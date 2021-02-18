@@ -1,0 +1,11 @@
+--- #install httpd using variable
+- hosts: demo
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+          pname: httpd
+  tasks:
+          - name: install httpd
+            action: yum name='{{pname}}' state=present
+
