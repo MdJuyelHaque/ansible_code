@@ -1,0 +1,7 @@
+--- # Get the server facts using puppet playbook
+- hosts: demo # server group's name
+  user: ansible #user in system where to execute the playbook
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
